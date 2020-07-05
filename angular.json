@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "NGO-App"
+    }
+  },
+  "defaultProject": "NGO-App",
+  "cli": {
+    "analytics": "1fda5d4c-f80f-4ba0-84a6-4fbd8401079a"
+  }
 }
