@@ -25,3 +25,14 @@ import { PostsComponent } from './components/posts/posts.component';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 ```
+
+- should create a `config` folder and store all config in there
+- in file `data.service.ts`, import httpClient and create functions to work with http
+- add import in `app.module.ts`
+- open `/users/users.component.ts`
+    + add import
+    ```
+    import { DataService } from '../../services/data.service';
+    import { Observable } from 'rxjs';
+    ```
+    + ngOnInit() : 

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+// import files/libraries to working with http
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  constructor() { }
+  // todo: create data object later on, adding list of User object
+  users$: Object;
 
-  ngOnInit(): void {
+  constructor(private data: DataService) { }
+
+  ngOnInit() {
+    this.data.getUsers().subscribe(
+      data => this.users$ = data
+    )
   }
 
 }
